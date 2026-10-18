@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="shell-type" content="web_standard" />
+  <title>Patas Carentes — Adoção &amp; Cuidado</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- CSS próprio -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tailwind (CDN) + configuração -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(96,86,73,0.06)]">
+    <div class="h-20 w-full px-gutter flex items-center justify-between">
+      <div class="flex items-center gap-md">
+        <a class="flex items-center gap-sm group" data-path="inicio" href="#">
+          <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center transition-transform group-hover:scale-105">
+            <span class="material-symbols-outlined text-primary text-[22px]">pets</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">Patas Carentes</span>
+            <span class="font-label-md text-label-md text-secondary text-[11px] tracking-wider uppercase mt-xs">Adoção &amp; Cuidado</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="hidden sm:flex items-center gap-sm" data-active-classes="bg-secondary-container text-on-surface font-semibold">
+        <a class="px-md py-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a>
+        <a class="px-md py-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ajuda-e-suporte" href="#">Ajuda e Suporte</a>
+        <a class="px-md py-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="termos-de-adocao" href="#">Termos de Adoção</a>
+      </nav>
+
+      <div class="flex items-center gap-md">
+        <a class="flex items-center gap-xs px-md py-sm rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" data-path="ajuda-e-suporte" href="#">
+          <span class="material-symbols-outlined text-primary text-[18px]">help</span>
+          <span class="font-label-md text-label-md hidden md:inline">Precisa de Ajuda?</span>
+        </a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="w-full pt-20 bg-background flex-1 flex flex-col items-center justify-center">
+    <div class="flex flex-col w-full">
+      <div class="relative w-full overflow-hidden py-12 px-gutter flex flex-col items-center justify-center">
+
+        <!-- Fundo com formas orgânicas suaves -->
+        <div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-secondary-container/40 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-16 w-80 h-80 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-surface-container-low/60 blur-2xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-5xl w-full flex flex-col items-center">
+
+          <!-- Cabeçalho central -->
+          <div class="text-center max-w-2xl mx-auto flex flex-col items-center mb-10">
+            <div class="inline-flex items-center gap-xs px-md py-xs rounded-full bg-secondary-container text-on-secondary-container mb-4 shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-primary icon-fill">favorite</span>
+              <span class="font-label-md text-label-md tracking-wider uppercase">Identificação Inicial</span>
+            </div>
+            <h1 class="font-display-lg text-display-lg text-primary tracking-tight mb-3">
+              Como você deseja transformar vidas hoje?
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+              Selecione o seu perfil para direcionarmos você para a melhor experiência na plataforma.
+            </p>
+          </div>
+
+          <!-- Grid com os dois modos de entrada -->
+          <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+            <!-- CARD 1: ONG / Protetor Independente -->
+            <div class="group relative flex flex-col justify-between bg-surface-container-lowest rounded-xl p-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
+              <div>
+                <div class="flex items-start justify-between mb-6">
+                  <div class="w-16 h-16 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <div class="relative flex items-center justify-center">
+                      <span class="material-symbols-outlined text-[32px]">home</span>
+                      <span class="material-symbols-outlined text-[16px] absolute -bottom-1 -right-1 text-primary-fixed icon-fill">pets</span>
+                    </div>
+                  </div>
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container font-label-md text-[12px] text-secondary">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Área Administrativa
+                  </span>
+                </div>
+
+                <h2 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-primary-container transition-colors">
+                  Sou uma ONG ou Protetor Independente
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                  Resgato animais, gerencio pedidos de adoção, recebo doações e quero acessar o Painel Administrativo de Gestão.
+                </p>
+
+                <div class="relative h-44 rounded-lg overflow-hidden mb-6 shadow-sm">
+                  <img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                       data-alt="A caring female veterinarian in earth-toned neutral medical scrubs gently examining a rescued golden mongrel dog inside a sunlit, clean shelter clinic, warm ambient light, emotional connection, muted warm tones of beige and brown."
+                       alt="Veterinária examinando um cão resgatado em um abrigo"
+                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK_fu0YxAU9vqgo8hifTTnN0eUCXS3n19KTcoA1UFScmgh_d222q9HIG6N7dDYTGa1PSinf263K5rULxwgOI7nhwa9xZOi5Urt5X-zW6apFKN2jH9N8JSEebdHVLD9FXZQZSSI6wrogBZXq8UPoxT-2vWT6Kwtndha_RtkBerjHgxbA4grLbPMhfauypyJC9KIggL5fm6I5oi0Vt2vWGB3IzHgJu0r1YE7wdddzCyt48hOA_TU_vbO" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent flex items-end p-md">
+                    <span class="font-label-md text-label-md text-on-primary flex items-center gap-xs">
+                      <span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+                      Mais de 1.400 animais sob cuidado contínuo
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-xs mb-8">
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md">
+                    <span class="material-symbols-outlined text-[15px] text-primary">dashboard</span>
+                    Acesso ao Painel ONG
+                  </span>
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md">
+                    <span class="material-symbols-outlined text-[15px] text-primary">healing</span>
+                    Gestão de Resgates
+                  </span>
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md">
+                    <span class="material-symbols-outlined text-[15px] text-primary">assignment_turned_in</span>
+                    Triagem de Adoção
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-sm pt-2">
+                <a class="w-full h-12 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-sm transition-colors shadow-sm group-hover:shadow" data-path="painel-ong-login" href="#">
+                  <span>Entrar como ONG</span>
+                  <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
+                <a class="w-full py-xs text-center font-label-md text-label-md text-secondary hover:text-primary transition-colors flex items-center justify-center gap-xs" data-path="cadastro-ong" href="#">
+                  <span>Não tem conta? Cadastre sua ONG aqui</span>
+                  <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD 2: Adotante ou Apoiador -->
+            <div class="group relative flex flex-col justify-between bg-surface-container-lowest rounded-xl p-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary-fixed-dim"></div>
+              <div>
+                <div class="flex items-start justify-between mb-6">
+                  <div class="w-16 h-16 rounded-xl bg-secondary-container flex items-center justify-center text-primary shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <div class="relative flex items-center justify-center">
+                      <span class="material-symbols-outlined text-[32px] icon-fill">favorite</span>
+                      <span class="material-symbols-outlined text-[16px] absolute -top-1 -right-1 text-primary">pets</span>
+                    </div>
+                  </div>
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-secondary-container/60 font-label-md text-[12px] text-on-secondary-container">
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Área da Família &amp; Amor
+                  </span>
+                </div>
+
+                <h2 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-primary-container transition-colors">
+                  Quero Adotar ou Apadrinhar
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                  Quero encontrar meu novo companheiro de quatro patas, enviar propostas de adoção, doar ou me tornar padrinho.
+                </p>
+
+                <div class="relative h-44 rounded-lg overflow-hidden mb-6 shadow-sm">
+                  <img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                       data-alt="A warm and joyful moment of an adopter hugging an affectionate rescue tabby cat and smiling happily inside a cozy, sunny living room with soft beige cushions, natural lighting, serene atmosphere."
+                       alt="Adotante abraçando um gato resgatado em uma sala aconchegante"
+                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1lGi-5unzQf6wkx9PULv93tiyr-UjO5O0NQ0ODtUSsvVaQam238_qGrBdbanmvcl9w0y0jufTG_fB0p1cZvggvibwh-tuZGldoB0enb22a1P8Mp-Pyv4u9KclKIFbNBIj3s71JMSzuV8gaAE7u7ZY1qkeqAgCaVx9i3ybKGB5PH07sXg_G_84Qhbee50WEaA0Cs9ntHa8JTiEEKvOg88kIMfbxNMBAUis0xur5BLND_Qyfl5Hg1Q2" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent flex items-end p-md">
+                    <span class="font-label-md text-label-md text-on-primary flex items-center gap-xs">
+                      <span class="material-symbols-outlined text-[18px]">sentiment_very_satisfied</span>
+                      Centenas de peludinhos esperando um lar
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-xs mb-8">
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md">
+                    <span class="material-symbols-outlined text-[15px] text-primary">travel_explore</span>
+                    Busca de Pets
+                  </span>
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md">
+                    <span class="material-symbols-outlined text-[15px] text-primary">diversity_1</span>
+                    Mural Social
+                  </span>
+                  <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container-high text-on-surface text-label-md font-label-md">
+                    <span class="material-symbols-outlined text-[15px] text-primary">mark_chat_read</span>
+                    Acompanhar Pedidos
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-sm pt-2">
+                <a class="w-full h-12 rounded-lg bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md flex items-center justify-center gap-sm transition-colors shadow-sm group-hover:shadow" data-path="login-adotante" href="#">
+                  <span>Entrar como Adotante</span>
+                  <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
+                <a class="w-full py-xs text-center font-label-md text-label-md text-secondary hover:text-primary transition-colors flex items-center justify-center gap-xs" data-path="cadastro-adotante" href="#">
+                  <span>Criar conta de adotante</span>
+                  <span class="material-symbols-outlined text-[16px]">person_add</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rodapé interno -->
+          <div class="w-full max-w-3xl flex flex-col sm:flex-row items-center justify-between gap-md p-md rounded-xl bg-surface-container-low shadow-sm text-center sm:text-left">
+            <div class="flex items-center gap-sm text-on-surface-variant">
+              <span class="material-symbols-outlined text-primary text-[20px]">remember_me</span>
+              <span class="font-body-md text-[14px]">
+                Já possui cadastro? O sistema lembrará sua escolha no próximo acesso.
+              </span>
+            </div>
+            <a class="shrink-0 flex items-center gap-xs font-label-md text-label-md text-primary hover:text-primary-container transition-colors py-xs px-sm rounded-lg hover:bg-surface-container-high" data-path="ajuda-e-suporte" href="#">
+              <span class="material-symbols-outlined text-[18px]">contact_support</span>
+              <span>Precisa de ajuda com seu acesso? Fale com nosso suporte</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="w-full bg-surface-container-low py-lg mt-auto shadow-[0_-1px_6px_rgba(96,86,73,0.03)]">
+    <div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left">
+      <div class="flex items-center gap-xs text-secondary">
+        <span class="material-symbols-outlined text-[18px] text-primary">volunteer_activism</span>
+        <span class="font-label-md text-label-md text-on-surface-variant">© 2024 Patas Carentes. Conectando corações e lares amorosos.</span>
+      </div>
+      <div class="flex items-center gap-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="termos-de-adocao" href="#">Privacidade &amp; Termos</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ajuda-e-suporte" href="#">Canais de Apoio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
