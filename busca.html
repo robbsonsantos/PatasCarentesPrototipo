@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Adoção | Patas Carentes</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#483f33",
+            "primary-container": "#605649",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#daccbb",
+            "primary-fixed": "#efe0cf",
+            "primary-fixed-dim": "#d2c4b4",
+            "secondary": "#645e51",
+            "secondary-container": "#eae2d1",
+            "on-secondary": "#ffffff",
+            "background": "#fff8f4",
+            "surface": "#fff8f4",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#fcf2ea",
+            "surface-container": "#f6ece4",
+            "surface-container-high": "#f1e6de",
+            "surface-container-highest": "#ebe1d9",
+            "outline": "#7d766d",
+            "outline-variant": "#cfc5bb",
+            "on-surface": "#1f1b16",
+            "on-surface-variant": "#4c463e",
+            "brand-pink": "#FF9CA6",
+            "brand-pink-light": "#FFF0F2"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans", "sans-serif"],
+            "body": ["Work Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "container-max": "1200px"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col antialiased">
+  <!-- TopNavBar -->
+  <header class="bg-background/95 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/40">
+    <div class="flex justify-between items-center w-full px-6 py-4 max-w-container-max mx-auto">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+          <span class="material-symbols-outlined filled text-2xl text-brand-pink">pets</span>
+        </div>
+        <a class="text-2xl font-headline font-bold text-primary tracking-tight" href="#">Patas Carentes</a>
+      </div>
+      <!-- Links Centrais -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-headline"
+          href="#">Início</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-headline"
+          href="#">Sobre Nós</a>
+        <a class="text-primary font-bold text-sm font-headline border-b-2 border-primary pb-1" href="#">Adoção</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-headline"
+          href="#">Contato</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-headline"
+          href="#">PetStory</a>
+      </nav>
+      <!-- Botões de Ação -->
+      <div class="flex items-center gap-2">
+        <button
+          class="px-4 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container transition-all text-xs font-bold tracking-wider uppercase font-headline">APADRINHE</button>
+        <button
+          class="px-4 py-2 rounded-xl bg-brand-pink text-white hover:opacity-90 transition-all text-xs font-bold tracking-wider uppercase font-headline shadow-sm">DOE</button>
+        <button
+          class="hidden lg:inline-flex px-4 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container transition-all text-xs font-bold tracking-wider uppercase font-headline">VOLUNTARIADO</button>
+        <button class="p-1 rounded-full text-primary hover:bg-surface-container transition-colors ml-1" title="Perfil">
+          <span class="material-symbols-outlined text-[28px]" data-icon="account_circle">account_circle</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="bg-surface-container-low py-12 md:py-16 border-b border-outline-variant/30">
+    <div class="max-w-container-max mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Texto Esquerda -->
+        <div class="lg:col-span-7 flex flex-col items-start gap-4">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-pink-light border border-brand-pink/30 text-primary font-headline text-xs font-bold tracking-wider uppercase">
+            <span class="material-symbols-outlined text-sm text-brand-pink filled">favorite</span>
+            Adoção Responsável
+          </div>
+          <h1 class="text-3xl md:text-5xl font-headline font-extrabold text-primary tracking-tight leading-tight">
+            Encontre seu novo amigo e mude uma vida.
+          </h1>
+          <p class="text-base md:text-lg text-on-surface-variant font-body leading-relaxed max-w-xl">
+            Cada um desses olhares guarda uma história de superação e uma vontade imensa de dar e receber amor. Conheça
+            nossos cães e gatos resgatados e descubra quem vai transformar o seu lar em um refúgio de alegria.
+          </p>
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a class="px-6 py-3 rounded-xl bg-primary text-white font-headline text-sm font-semibold hover:bg-primary-container transition-all shadow-sm flex items-center gap-2"
+              href="#buscar">
+              <span class="material-symbols-outlined text-base">search</span>
+              Ver Animais Disponíveis
+            </a>
+            <a class="px-6 py-3 rounded-xl bg-white border border-outline-variant/60 text-primary font-headline text-sm font-semibold hover:bg-surface-container transition-all flex items-center gap-2"
+              href="#">
+              <span class="material-symbols-outlined text-base text-brand-pink filled">volunteer_activism</span>
+              Como Funciona a Adoção
+            </a>
+          </div>
+        </div>
+        <!-- Imagem Direita -->
+        <div class="lg:col-span-5 relative">
+          <div
+            class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[4/3] bg-surface-container">
+            <img alt="Cachorro resgatado feliz no abrigo Warm Paws" class="w-full h-full object-cover object-center"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1XMUHPyI2nKLePYCy9kZkAafGo-lvoSGs-TML6deh_74GjCMvRfKnvKsfdbAiEZpQE3gv_FiKv2rEAJmgg5PtTopkyf-a7bDLNw8WSj6kgz87BhxAY8JnAlz-xzhoO4_SZpdp5jobeNvftl5Dej8U3gnbADxN4xmgbYMu5BCW1eH_ZMo7N69-t7f4v3Eti5CXndFJOBzLcZUeh-d03rX8N0Sphnlt7X5W1xr-LabQ3PhCU6HDBZfHpmjJU" />
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-md border border-white/60 flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-brand-pink/20 flex items-center justify-center text-primary flex-shrink-0">
+                <span class="material-symbols-outlined text-brand-pink filled">cruelty_free</span>
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-headline font-bold text-primary truncate">Mais de 450 animais resgatados</p>
+                <p class="text-[11px] text-on-surface-variant truncate">Todos vacinados, vermifugados e castrados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Main Content & Filters -->
+  <main class="flex-grow py-10 bg-background" id="buscar">
+    <div class="max-w-container-max mx-auto px-6">
+      <!-- Caixa de Busca e Filtros -->
+      <div class="bg-surface-container-low rounded-3xl p-5 md:p-6 mb-12 border border-outline-variant/40 shadow-sm">
+        <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 items-end"
+          onsubmit="event.preventDefault();">
+          <!-- Campo de Busca -->
+          <div class="lg:col-span-4 flex flex-col gap-1.5">
+            <label class="text-xs font-headline font-bold text-primary tracking-wide">Buscar por nome</label>
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-xl">search</span>
+              <input
+                class="w-full pl-10 pr-4 py-2.5 bg-white rounded-xl border border-outline-variant/70 text-sm font-body text-on-surface placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                placeholder="Ex: Bob, Bento, Luna, Mel..." type="text" />
+            </div>
+          </div>
+          <!-- Dropdown Espécie -->
+          <div class="lg:col-span-2 flex flex-col gap-1.5">
+            <label class="text-xs font-headline font-bold text-primary tracking-wide">Espécie</label>
+            <select
+              class="w-full px-3.5 py-2.5 bg-white rounded-xl border border-outline-variant/70 text-sm font-body text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+              <option value="">Todas as espécies</option>
+              <option value="caes">Cães</option>
+              <option value="gatos">Gatos</option>
+            </select>
+          </div>
+          <!-- Dropdown Porte -->
+          <div class="lg:col-span-2 flex flex-col gap-1.5">
+            <label class="text-xs font-headline font-bold text-primary tracking-wide">Porte</label>
+            <select
+              class="w-full px-3.5 py-2.5 bg-white rounded-xl border border-outline-variant/70 text-sm font-body text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+              <option value="">Todos os portes</option>
+              <option value="pequeno">Porte Pequeno</option>
+              <option value="medio">Porte Médio</option>
+              <option value="grande">Porte Grande</option>
+            </select>
+          </div>
+          <!-- Dropdown Idade -->
+          <div class="lg:col-span-2 flex flex-col gap-1.5">
+            <label class="text-xs font-headline font-bold text-primary tracking-wide">Idade</label>
+            <select
+              class="w-full px-3.5 py-2.5 bg-white rounded-xl border border-outline-variant/70 text-sm font-body text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+              <option value="">Todas as idades</option>
+              <option value="filhote">Filhote</option>
+              <option value="adulto">Adulto</option>
+              <option value="senior">Sênior</option>
+            </select>
+          </div>
+          <!-- Botão Filtrar -->
+          <div class="lg:col-span-2">
+            <button
+              class="w-full py-2.5 px-4 bg-primary text-white rounded-xl font-headline text-sm font-semibold hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm"
+              type="submit">
+              <span class="material-symbols-outlined text-lg">filter_alt</span>
+              Filtrar
+            </button>
+          </div>
+        </form>
+        <!-- Indicador de Resultados & Tags Rápidas -->
+        <div
+          class="flex flex-wrap items-center justify-between gap-3 mt-5 pt-4 border-t border-outline-variant/30 text-xs text-on-surface-variant font-headline">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-primary">8 pets</span> aguardando um lar carinhoso
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-outline">Filtros populares:</span>
+            <button
+              class="px-2.5 py-1 bg-white hover:bg-surface-container rounded-lg border border-outline-variant/50 transition-colors">Dóceis</button>
+            <button
+              class="px-2.5 py-1 bg-white hover:bg-surface-container rounded-lg border border-outline-variant/50 transition-colors">Apto
+              p/ Apartamento</button>
+            <button
+              class="px-2.5 py-1 bg-white hover:bg-surface-container rounded-lg border border-outline-variant/50 transition-colors">Filhotes</button>
+          </div>
+        </div>
+      </div>
+      <!-- Grade de Cards de Pets para Adoção -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1: Bob (Cão Golden) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Bob - Golden Retriever"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1XMUHPyI2nKLePYCy9kZkAafGo-lvoSGs-TML6deh_74GjCMvRfKnvKsfdbAiEZpQE3gv_FiKv2rEAJmgg5PtTopkyf-a7bDLNw8WSj6kgz87BhxAY8JnAlz-xzhoO4_SZpdp5jobeNvftl5Dej8U3gnbADxN4xmgbYMu5BCW1eH_ZMo7N69-t7f4v3Eti5CXndFJOBzLcZUeh-d03rX8N0Sphnlt7X5W1xr-LabQ3PhCU6HDBZfHpmjJU" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Médio
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Bob</h3>
+                <span class="text-xs font-semibold text-brand-pink flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm filled">verified</span> Aprovado
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">2 anos • Macho</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Castrado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Vacinado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Super
+                  Dócil</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+        <!-- Card 2: Luna (Gata Siamês) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Luna - Gata Siamesa"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV5V9TFHz0DeD1yrnxx-ManM2JLJBv5lMnJveVRPeW7PRTix9WTQVfknZNNF-vLzZZR0mlmxKtCw0z-y15aWFZqOPsUXrWQgi6Mmu0D9elHb6upXFBrzfAA--9qjTgetm95g43qgrfXVIis6SRvUPjFtf-R9IGKJJUpk67LQSb6z7nOxkXMztS2RffEP0JNK5c0RsP0FvqVbLnnIbLVSbUNnc-NYkiU-1omDRbh-VSUYykLEdSMHZ47yxI5-bNlAKQORtHE1SaflE" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Pequeno
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Luna</h3>
+                <span class="text-xs font-semibold text-brand-pink flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm filled">favorite</span> Doce
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">1 ano • Fêmea</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Castrada</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Apto
+                  p/ Apt</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Calma</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+        <!-- Card 3: Bento (Gato Frajola) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Bento - Gato Frajola"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcqdo2-HpygHWtKyTYM8WWqMbpvN-0lxjBz0rghsQ9UhHd3r_hoX4OMBxe8gvpP56mvrgEu_B-KTBRC-VsGUt8QC8MQ1bvB-lHJgUWXyoxFpIxFXAD5WiqazxRTWBBnUtVY39x0bDqwxU_euWJvHUElUG5TzEO30ND_IIabO2ycDt2bg7mKZ58Yn3y1o0a9yytsm2MGCY2E6QLaKQ7YwVOVxDK4GouV424ONt1X-ylPfFw49_qLa8okpi3TJiy8DU-bdGMsbxYhak" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Pequeno
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Bento</h3>
+                <span class="text-xs font-semibold text-primary/70 flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm">home</span> Carinhoso
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">2 anos • Macho</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Vacinado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Sociável</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Brincalhão</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+        <!-- Card 4: Thor (Filhote Dourado) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Thor - Filhote"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVNNRqS6GEgk1QVawdPyE93SsF7E172jAnQxYmxYPj7nO5FeuSVNAmLm1_5xTk_jolux3hMboS5QYm7fr-k8YoEnqj43pDjp1CpA3hgv1o1ttf9R2AqcoMnLf6LeU12XfCVjoMscgWv_u4safOIrDN5S2_LXQ6RYz0gV0xtzg-If2SoMdGWcw4RUp94BsGnHS02fT3reZMe_0ph_BGYRXJgEsKELetp9iF2PYFa7_K1vQCqfQ41jUNRVcq-n-PmnoLguwBODECKDQ" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Médio
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Thor</h3>
+                <span class="text-xs font-semibold text-brand-pink flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm filled">star</span> Filhote
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">4 meses • Macho</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Vermifugado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">1ª
+                  Dose Vacina</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Ativo</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+        <!-- Card 5: Mel (Siamês Elegante) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Mel - Gatinha"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuARv3HtIR-GoRsyTr0Og46HuO4eejh_TdlM6W3JBitCi6_wt18eX_3z32OCwj7nribTMrMRFi1iB52r09I73KJjefk8unGE5t0VDzBkTziVLVaVi-O1vueDSrLCOimAjKFX-6AUDRcqAL5N1KzpC5vqzvNdm9Fc5daa5DsV_H-zurygRCt8wtWl3vvCJoUWr_ycxnFl643hUFa6tJYbtCrKAxbc6zQh7jJNL8ITHtVPWV4DNfKWz4kwRVAM2gSWozutKa2YELbwYrc" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Pequeno
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Mel</h3>
+                <span class="text-xs font-semibold text-brand-pink flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm filled">favorite</span> Mansa
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">3 anos • Fêmea</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Castrada</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Apto
+                  p/ Apt</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Silenciosa</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+        <!-- Card 6: Simba (Gato Frajola) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Simba - Gato"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_wLjHrRFRqsNYMwixPgsEJwoVx27leQcev5ejlFFmZrFnR7uv4DcAejygW2mKRVvIAq4pR-nKYgQaP9fUi9EfWXGWh1445I7krGwk4i9GwBVbDHG60CaxWSZtwGXIyc7Ij28oP3zBGArCbFFm5QNnFK3Vhw9NroXv5dE4cq1CvHdzo_cym7FFOpDOJz5_R60-gki1IVta_RmbI9n93UDsQ-EWoi14FjWVCBOOXN4WR0lhH9LbOdCRko4b-QYlAEsEbqAmQ7Gq_nk" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Pequeno
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Simba</h3>
+                <span class="text-xs font-semibold text-primary/70 flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm">cruelty_free</span> Amigável
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">1 ano • Macho</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Castrado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Vacinado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Divertido</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+        <!-- Card 7: Nina (Cãozinho no gramado) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Nina - Cadela"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7tTBSHbP7srDTMLD6hS7YMeE1m1lqLDVFEnZa-A8NwNyDP10R40NqZLRY_Ki8_YZOxWlGzZJSD7DqOnrbhyC7FwN6cYkJLtYyqqrUFe1PgoDuucdgPZOKjBAJV8WmMnPRVgzZcMLDLrcUYPgZdxo1kgNF9H50I3HngMMAME6ZEc4lPBdJzMJrRpQVt9SrzTurlriJ6-t4uKfshK1Cs2GZisWttbKM2R9miCCv-CGIqdJFV5XEcIiFIDdVE05NKOutI-Q88mhJE5g" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Pequeno
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Nina</h3>
+                <span class="text-xs font-semibold text-brand-pink flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm filled">favorite</span> Amorosa
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">6 meses • Fêmea</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Castrada</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Vacinada</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Dócil</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+        <!-- Card 8: Pipoca (Golden jovem) -->
+        <div
+          class="bg-surface-container-lowest rounded-3xl overflow-hidden border border-outline-variant/40 hover:shadow-lg transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-surface-container">
+            <img alt="Pipoca - Golden filhote"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD88FNqttjUc9v30h0eGbPGoKrTl72xYpAiR7xS6VN_ZZz0C5njyQg5DccWYTgUiNluzXOwfQGHbKn7RgFS0HrcZX96SFO5w5z0M_MsKn1iQD9E4V_XwW26jAW1tnjFutgWqfNypiHzU5ByqX-RLqXInqYO3HCXhVVcuWkywvj4Y1vT1pth7CK3Efp8UhAEq1vgxwIkbEr1nyZw_L9yXfS0aoXkdsIsFobrTilRFDTOanshWWi_Mhh01jToCyj0jNyzr2HlWbo5UqE" />
+            <button
+              class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-brand-pink transition-colors shadow-sm"
+              title="Favoritar">
+              <span class="material-symbols-outlined text-xl">favorite</span>
+            </button>
+            <span
+              class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-primary/85 backdrop-blur-sm text-white text-[11px] font-headline font-semibold">
+              Porte Grande
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-headline font-bold text-primary">Pipoca</h3>
+                <span class="text-xs font-semibold text-primary/70 flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm">pets</span> Companheiro
+                </span>
+              </div>
+              <p class="text-xs font-body text-on-surface-variant mt-1">1 ano • Macho</p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Castrado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-medium">Vacinado</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-brand-pink-light text-primary text-[11px] font-semibold">Sociável</span>
+              </div>
+            </div>
+            <button
+              class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold tracking-wider uppercase hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">pets</span>
+              QUERO ADOTAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Paginação / Carregar Mais -->
+      <div class="mt-14 mb-4 flex justify-center">
+        <button
+          class="px-8 py-3.5 rounded-2xl bg-surface-container hover:bg-surface-container-high text-primary font-headline text-sm font-bold tracking-wide transition-all border border-outline-variant/60 flex items-center gap-2 shadow-sm">
+          <span class="material-symbols-outlined text-xl">expand_more</span>
+          Carregar mais amigos
+        </button>
+      </div>
+    </div>
+  </main>
+  <!-- Banner Informativo Sobre o Processo -->
+  <section class="bg-surface-container-low py-12 border-t border-outline-variant/30">
+    <div class="max-w-container-max mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex items-start gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-brand-pink-light flex items-center justify-center text-primary flex-shrink-0">
+            <span class="material-symbols-outlined text-2xl text-brand-pink filled">check_circle</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold text-primary text-base">Processo Responsável</h4>
+            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Entrevistamos as famílias para garantir que
+              a rotina e o espaço combinem com as necessidades do animal.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-brand-pink-light flex items-center justify-center text-primary flex-shrink-0">
+            <span class="material-symbols-outlined text-2xl text-brand-pink filled">medical_services</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold text-primary text-base">Saúde em Dia</h4>
+            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Todos os animais são entregues vacinados,
+              vermifugados, microchipados e com castração garantida.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-brand-pink-light flex items-center justify-center text-primary flex-shrink-0">
+            <span class="material-symbols-outlined text-2xl text-brand-pink filled">support_agent</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold text-primary text-base">Apoio Pós-Adoção</h4>
+            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Nossa equipe de voluntários auxilia nos
+              primeiros meses de adaptação para garantir o bem-estar mútuo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-surface-container border-t border-outline-variant/60">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 py-12 max-w-container-max mx-auto">
+      <!-- Branding & Copyright -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+            <span class="material-symbols-outlined filled text-lg text-brand-pink">pets</span>
+          </div>
+          <span class="text-xl font-headline font-bold text-primary">Patas Carentes</span>
+        </div>
+        <p class="text-xs text-on-surface-variant leading-relaxed">Transformando a vida de animais abandonados através
+          do resgate, cuidado e adoção com afeto e responsabilidade.</p>
+        <p class="text-xs text-on-surface-variant/80 italic mt-2">copyright © todos os direitos reservados</p>
+      </div>
+      <!-- Social Media -->
+      <div class="flex flex-col gap-2">
+        <h4 class="text-xs font-headline font-bold text-on-surface uppercase tracking-wider">Redes Sociais</h4>
+        <div class="flex flex-col gap-1.5">
+          <a class="text-on-surface-variant hover:text-primary transition-colors text-xs flex items-center gap-1.5"
+            href="#">
+            <span class="material-symbols-outlined text-sm">share</span> @patascarentes
+          </a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors text-xs flex items-center gap-1.5"
+            href="#">
+            <span class="material-symbols-outlined text-sm">photo_camera</span> @patascarentes.oficial
+          </a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors text-xs flex items-center gap-1.5"
+            href="#">
+            <span class="material-symbols-outlined text-sm">smart_display</span> /patascarentes
+          </a>
+        </div>
+      </div>
+      <!-- Navigation Links -->
+      <div class="flex flex-col gap-2">
+        <h4 class="text-xs font-headline font-bold text-on-surface uppercase tracking-wider">Links Rápidos</h4>
+        <div class="flex flex-col gap-1.5">
+          <a class="text-on-surface-variant hover:text-primary transition-colors text-xs" href="#">Sobre nós</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors text-xs" href="#">Programa de
+            Apadrinhamento</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors text-xs" href="#">Quero Ser
+            Voluntário</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors text-xs" href="#">Parcerias e
+            Doações</a>
+        </div>
+      </div>
+      <!-- Partners/Logo Cluster -->
+      <div class="flex flex-col gap-2">
+        <h4 class="text-xs font-headline font-bold text-on-surface uppercase tracking-wider">Apoio Institucional</h4>
+        <div class="flex flex-wrap items-center gap-3">
+          <div
+            class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-outline-variant/40 p-2 overflow-hidden">
+            <img alt="Fatec Logo" class="max-w-full h-auto grayscale hover:grayscale-0 transition-all"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfyT55d5foHzKGgRYlGJnBDT6_tpkv7itaAgDZcIrKFULRGxwCJIyySvm9WrlefyGSrHs6Pz3aJrDsKSw2R8YkxgX7-jjd67Rt1x8nsGQRlbWC-zNnsyeFQzy0BZSCIgJnxZ4CQzoht3RIA1dTbbuOaVLCUZ-fXQYLwR9QZ70TTYR91AHwG9UAF4YoDm04nPzpco_n6FXcv2Cp610hLh1sXikKuecrQ4V3V9b7uwkF1AjpkkUctYmjdsGc6pS2z3V6smxq7LlZiXc" />
+          </div>
+          <div
+            class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-outline-variant/40 p-2 overflow-hidden">
+            <img alt="Fatec Logo" class="max-w-full h-auto grayscale hover:grayscale-0 transition-all"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk3wVHRqT0R16yNTV5zkpVAWcvX7Ll9aZPJu-R1JFSFpG1c6oh9YQ6Czgz4CYW-5RkncLIBgUpAO4Jxmv-Zeyc1Ht5CVeYF3_oG3ArnGhE1uiTf4g6RIQr2NZY73szuHzkI_aTvESu02WoZ4rPdPPO7kAiRd3t-3IrHl9FXJ4JMGbJhxvsY6Ba9pqD1q7ZFH69lxWTCTwrIMtpABQhN47dhQ45aYwBSzBZFeY3344pHjQEv6yu4UEwP5E6Y-YRc2OlTNHhzeG5fp4" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

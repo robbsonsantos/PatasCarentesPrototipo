@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR" style="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Patas Carentes - Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fff8f4;
+        }
+    </style>
+    <!-- Tailwind Config Verbatim -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1f1b16",
+                        "surface-container-highest": "#ebe1d9",
+                        "error": "#ba1a1a",
+                        "surface": "#fff8f4",
+                        "inverse-surface": "#352f2a",
+                        "outline-variant": "#cfc5bb",
+                        "tertiary-fixed-dim": "#c3c6cf",
+                        "surface-container-high": "#f1e6de",
+                        "on-secondary": "#ffffff",
+                        "primary": "#483f33",
+                        "secondary": "#645e51",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#eae2d1",
+                        "on-tertiary-fixed-variant": "#43474e",
+                        "surface-dim": "#e2d8d0",
+                        "on-primary-fixed": "#221a10",
+                        "on-primary-container": "#daccbb",
+                        "on-secondary-container": "#6a6456",
+                        "background": "#fff8f4",
+                        "on-tertiary-fixed": "#181c22",
+                        "primary-container": "#605649",
+                        "primary-fixed": "#efe0cf",
+                        "tertiary": "#3d4147",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#4b463a",
+                        "inverse-on-surface": "#f9efe7",
+                        "surface-tint": "#675d50",
+                        "on-tertiary-container": "#cbced7",
+                        "tertiary-fixed": "#dfe2eb",
+                        "secondary-container": "#eae2d1",
+                        "secondary-fixed-dim": "#cec6b5",
+                        "surface-container": "#f6ece4",
+                        "surface-bright": "#fff8f4",
+                        "tertiary-container": "#54585f",
+                        "on-primary-fixed-variant": "#4f4539",
+                        "inverse-primary": "#d2c4b4",
+                        "on-background": "#1f1b16",
+                        "outline": "#7d766d",
+                        "surface-container-low": "#fcf2ea",
+                        "on-surface-variant": "#4c463e",
+                        "primary-fixed-dim": "#d2c4b4",
+                        "on-secondary-fixed": "#1f1b11",
+                        "surface-variant": "#ebe1d9",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "2.5rem",
+                        "gutter": "1.5rem",
+                        "md": "1rem",
+                        "lg": "1.5rem",
+                        "container-max": "1200px",
+                        "sm": "0.5rem",
+                        "xs": "0.25rem"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <meta content="web_standard" name="shell-type" />
+</head>
+
+<body class="bg-background text-on-background min-h-screen" data-mode="connect">
+    <!-- TopNavBar (Shared Component) -->
+    <nav class="bg-background dark:bg-background shadow-sm dark:shadow-none docked full-width top-0 z-50">
+        <div class="flex justify-between items-center w-full px-gutter py-md max-w-container-max mx-auto">
+            <div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">
+                Patas Carentes
+            </div>
+            <div class="hidden md:flex gap-lg items-center">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 text-label-md font-label-md"
+                    href="#">Início</a>
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md"
+                    href="#">Sobre Nós</a>
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md"
+                    href="#">Contato</a>
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md"
+                    href="#">PetStory</a>
+            </div>
+            <div class="flex gap-sm items-center">
+                <button
+                    class="bg-primary text-on-primary px-lg py-sm rounded-lg hover:bg-primary-container transition-all active:scale-95 text-label-md font-label-md">ADOTE</button><button
+                    class="bg-primary-container text-on-primary px-lg py-sm rounded-lg hover:opacity-90 transition-all active:scale-95 text-label-md font-label-md">APADRINHE</button>
+                <button
+                    class="bg-[#FF9CA6] text-primary font-bold px-lg py-sm rounded-lg hover:opacity-90 transition-all active:scale-95 text-label-md font-label-md">DOE</button>
+                <button class="p-sm rounded-full hover:bg-surface-container-high transition-all">
+                    <span class="material-symbols-outlined text-primary">account_circle</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <!-- Divider Section -->
+    <!-- Featured Story (Asymmetric Bento-style Layout) -->
+    <main class="max-w-container-max mx-auto px-gutter relative overflow-hidden pt-lg pb-xl">
+        <div class="flex flex-col w-full">
+            <!-- Hero Section -->
+            <section
+                class="relative w-full overflow-hidden rounded-xl bg-surface-container py-xl px-gutter mb-xl shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center max-w-container-max mx-auto">
+                    <!-- Left Copy Column -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left z-10">
+                        <div
+                            class="inline-flex items-center gap-sm bg-secondary-container px-md py-xs rounded-full mb-md">
+                            <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+                            <span
+                                class="font-label-md text-label-md text-on-secondary-fixed uppercase tracking-wider">Clube
+                                de Benefícios &amp; Impacto</span>
+                        </div>
+                        <h1 class="font-display-lg text-display-lg text-primary mb-md leading-tight">
+                            Transforme sua paixão por pets em vantagens exclusivas e amor compartilhado.
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl">
+                            O <strong>PetVip</strong> une economia inteligente no dia a dia do seu melhor amigo — com
+                            descontos em rações, exames, caixas de mimos e telemedicina — ao financiamento direto de
+                            tratamentos e alimentação de animais resgatados pelo <em>Patas Carentes</em>.
+                        </p>
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-wrap items-center gap-md mb-xl">
+                            <a class="bg-primary text-on-primary hover:bg-primary-container px-xl py-md rounded-lg font-label-md text-label-md shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-xs"
+                                href="#planos">
+                                <span class="">Conhecer Planos</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                            </a>
+                            <a class="bg-surface-container-low hover:bg-surface-container-high text-primary px-xl py-md rounded-lg font-label-md text-label-md transition-all active:scale-95"
+                                href="#como-funciona">
+                                Como Funciona
+                            </a>
+                        </div>
+                        <!-- Metric Badges Row -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-md w-full pt-md">
+                            <div class="bg-surface p-md rounded-lg shadow-sm flex flex-col">
+                                <span class="font-headline-lg text-headline-lg text-primary font-bold">+2.500</span>
+                                <span class="font-label-md text-label-md text-on-surface-variant">Tutores PetVip
+                                    Ativos</span>
+                            </div>
+                            <div class="bg-surface p-md rounded-lg shadow-sm flex flex-col">
+                                <span class="font-headline-lg text-headline-lg text-primary font-bold">+120</span>
+                                <span class="font-label-md text-label-md text-on-surface-variant">Clínicas &amp; Lojas
+                                    Parceiras</span>
+                            </div>
+                            <div class="bg-surface p-md rounded-lg shadow-sm flex flex-col">
+                                <span class="font-headline-lg text-headline-lg text-primary font-bold">100%</span>
+                                <span class="font-label-md text-label-md text-on-surface-variant">Lucro em Ração &amp;
+                                    Cuidados</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Visual Column -->
+                    <div class="lg:col-span-5 relative flex items-center justify-center">
+                        <div
+                            class="relative w-full aspect-square max-w-[440px] rounded-xl overflow-hidden shadow-xl bg-surface-container-high">
+                            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                data-alt="A portrait of a cheerful, well-groomed golden retriever sitting proudly next to a wooden animal shelter sign in warm morning light, wearing a light blue knit bandana, captured in natural earth tones, creamy background and warm light."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo4NTvwLXocqDPMaE0Ptoo37XJWMZ66LHL2fSfeioTddSO2qsDcxo9wopVpsIThc70OIojTzR-Ke9UIv3UESxzeZRai6E037q7uXE9MytpSWUuBcS-ZACwTH-6hvNjgwsBN82OlQ5IvYCZKPmkUmc9HfwcRto9gpr972fQcpTJ-vR-zu5KW9cJmWWJAPwIrb61a9KI2d9YBNvvm5nAFdgWf11G_J5-eF8Dd9bW47kF47cgGPQUCgaE" />
+                            <div
+                                class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm p-md rounded-lg shadow-md flex items-center justify-between">
+                                <div class="flex items-center gap-sm">
+                                    <span class="material-symbols-outlined text-primary text-[28px]">stars</span>
+                                    <div>
+                                        <p class="font-label-md text-label-md text-primary font-bold">Membro PetVip Ouro
+                                        </p>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">Protegendo 2
+                                            animais resgatados</p>
+                                    </div>
+                                </div>
+                                <span
+                                    class="bg-secondary-container text-on-secondary-fixed text-label-md font-label-md px-sm py-xs rounded-full">Ativo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Como Funciona Section -->
+            <section class="w-full py-xl mb-xl" id="como-funciona">
+                <div class="max-w-container-max mx-auto px-gutter text-center">
+                    <span
+                        class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-xs block">Simplicidade
+                        &amp; Transparência</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-xl">Como Funciona a Sua Assinatura</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-lg">
+                        <!-- Step 1 -->
+                        <div
+                            class="bg-surface-container p-xl rounded-xl text-left flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                            <div>
+                                <div
+                                    class="w-16 h-16 rounded-full bg-surface flex items-center justify-center text-primary mb-md shadow-sm group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-[32px]">assignment_turned_in</span>
+                                </div>
+                                <span
+                                    class="font-headline-lg text-headline-lg text-outline-variant block mb-xs">01</span>
+                                <h3 class="font-headline-md text-headline-md text-primary mb-sm">Escolha seu Nível</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Selecione o plano ideal para suas despesas rotineiras: Bronze, Prata ou Ouro com
+                                    cobrança mensal transparente e sem fidelidade.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div
+                            class="bg-surface-container p-xl rounded-xl text-left flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                            <div>
+                                <div
+                                    class="w-16 h-16 rounded-full bg-surface flex items-center justify-center text-primary mb-md shadow-sm group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-[32px]">credit_card</span>
+                                </div>
+                                <span
+                                    class="font-headline-lg text-headline-lg text-outline-variant block mb-xs">02</span>
+                                <h3 class="font-headline-md text-headline-md text-primary mb-sm">Cartão Virtual</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Acesse sua carteira digital instantaneamente para validar descontos direto no caixa
+                                    dos estabelecimentos parceiros ou via cupom online.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div
+                            class="bg-surface-container p-xl rounded-xl text-left flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                            <div>
+                                <div
+                                    class="w-16 h-16 rounded-full bg-surface flex items-center justify-center text-primary mb-md shadow-sm group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-[32px]">redeem</span>
+                                </div>
+                                <span
+                                    class="font-headline-lg text-headline-lg text-outline-variant block mb-xs">03</span>
+                                <h3 class="font-headline-md text-headline-md text-primary mb-sm">Benefícios &amp; Mimos
+                                </h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Aproveite os descontos, acesse os cursos de adestramento e receba a sua Box de mimos
+                                    e brinquedos exclusivos na porta da sua casa.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div
+                            class="bg-surface-container p-xl rounded-xl text-left flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                            <div>
+                                <div
+                                    class="w-16 h-16 rounded-full bg-surface flex items-center justify-center text-primary mb-md shadow-sm group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-[32px]">volunteer_activism</span>
+                                </div>
+                                <span
+                                    class="font-headline-lg text-headline-lg text-outline-variant block mb-xs">04</span>
+                                <h3 class="font-headline-md text-headline-md text-primary mb-sm">Impacto Direto</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Acompanhe via relatório mensal os animais acolhidos, castrados e alimentados pela
+                                    sua mensalidade. Faça a diferença real!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Pricing Cards Section -->
+            <section class="w-full py-xl mb-xl" id="planos">
+                <div class="max-w-container-max mx-auto px-gutter">
+                    <div class="text-center max-w-2xl mx-auto mb-xl">
+                        <span
+                            class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-xs block">Planos
+                            Acessíveis</span>
+                        <h2 class="font-display-lg text-display-lg text-primary mb-sm">Escolha sua Categoria PetVip</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Economize em consultas, medicamentos e alimentação enquanto financia o resgate de dezenas de
+                            patinhas.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-lg items-stretch">
+                        <!-- Bronze Plan -->
+                        <div
+                            class="bg-surface-container-low p-xl rounded-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div>
+                                <div class="flex justify-between items-center mb-md">
+                                    <span class="font-headline-md text-headline-md text-primary font-bold">PetVip
+                                        Bronze</span>
+                                    <span class="material-symbols-outlined text-secondary text-[24px]">shield</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                                    Perfeito para quem quer economizar no dia a dia e começar a apoiar a causa animal
+                                    com regularidade.
+                                </p>
+                                <div class="mb-xl">
+                                    <span class="font-display-lg text-display-lg text-primary font-bold">R$ 29,90</span>
+                                    <span class="font-body-md text-body-md text-on-surface-variant">/ mês</span>
+                                </div>
+                                <ul class="flex flex-col gap-md mb-xl">
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">5% a 10% de desconto em
+                                            pet shops e clínicas credenciadas</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Acesso antecipado a
+                                            artigos e guias de saúde do PetStory</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Certificado digital de
+                                            Apoiador Oficial do Patas Carentes</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Participação no grupo
+                                            VIP comunitário de tutores</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="w-full bg-surface hover:bg-surface-container-high text-primary font-label-md text-label-md py-md rounded-lg shadow-sm transition-all active:scale-95">
+                                Assinar Bronze
+                            </button>
+                        </div>
+                        <!-- Silver Plan (Featured / Mais Popular) -->
+                        <div
+                            class="relative bg-surface p-xl rounded-xl flex flex-col justify-between shadow-xl scale-100 md:-translate-y-2">
+                            <!-- Featured Badge -->
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF9CA6] text-primary font-bold px-lg py-xs rounded-full text-label-md font-label-md uppercase tracking-wider shadow-sm">
+                                Mais Escolhido
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-md pt-xs">
+                                    <span class="font-headline-md text-headline-md text-primary font-bold">PetVip
+                                        Prata</span>
+                                    <span class="material-symbols-outlined text-primary text-[28px]">award_star</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                                    O equilíbrio ideal com brindes entregues na sua porta, descontos turbinados e
+                                    cuidados preventivos.
+                                </p>
+                                <div class="mb-xl">
+                                    <span class="font-display-lg text-display-lg text-primary font-bold">R$ 59,90</span>
+                                    <span class="font-body-md text-body-md text-on-surface-variant">/ mês</span>
+                                </div>
+                                <ul class="flex flex-col gap-md mb-xl">
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface"><strong>Até 20%
+                                                OFF</strong> em banho, tosa e consultas veterinárias</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface"><strong>1 Box Bimestral
+                                                de Brindes:</strong> petiscos artesanais e brinquedo</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Plantão tira-dúvidas
+                                            online com veterinários parceiros (1x/mês)</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Acesso total a
+                                            videoaulas de adestramento positivo</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Garante vacinação e
+                                            vermifugação de 1 animal resgatado</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-md rounded-lg shadow-md transition-all active:scale-95 font-bold">
+                                Assinar Prata Agora
+                            </button>
+                        </div>
+                        <!-- Gold Plan -->
+                        <div
+                            class="bg-surface-container-low p-xl rounded-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div>
+                                <div class="flex justify-between items-center mb-md">
+                                    <div>
+                                        <span
+                                            class="font-headline-md text-headline-md text-primary font-bold block">PetVip
+                                            Ouro</span>
+                                        <span class="font-label-md text-label-md text-secondary">Experiência
+                                            Completa</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[28px]">workspace_premium</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                                    Máxima proteção, teleorientação veterinária 24 horas e caixa de mimos entregue
+                                    mensalmente.
+                                </p>
+                                <div class="mb-xl">
+                                    <span class="font-display-lg text-display-lg text-primary font-bold">R$ 99,90</span>
+                                    <span class="font-body-md text-body-md text-on-surface-variant">/ mês</span>
+                                </div>
+                                <ul class="flex flex-col gap-md mb-xl">
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface"><strong>Até 30%
+                                                OFF</strong> em farmácias veterinárias e pet shops conveniados</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface"><strong>Box PetVip
+                                                Mensal Exclusiva</strong> com produtos premium</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface"><strong>Teleorientação
+                                                Veterinária 24h Ilimitada</strong> por videochamada</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Entrada VIP garantida
+                                            para eventos e feiras de adoção</span>
+                                    </li>
+                                    <li class="flex items-start gap-sm">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                                        <span class="font-body-md text-body-md text-on-surface">Alimenta integralmente 2
+                                            animais em recuperação no abrigo</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="w-full bg-primary-container hover:opacity-90 text-on-primary font-label-md text-label-md py-md rounded-lg shadow-sm transition-all active:scale-95">
+                                Assinar Ouro
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Detailed Comparison Table -->
+            <section class="w-full py-xl mb-xl bg-surface-container rounded-xl">
+                <div class="max-w-container-max mx-auto px-gutter">
+                    <div class="text-center max-w-2xl mx-auto mb-xl">
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Comparativo de Benefícios</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Confira cada item lado a lado para
+                            encontrar o plano que melhor se adapta à rotina do seu animal.</p>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <div class="min-w-[640px] flex flex-col gap-xs">
+                            <!-- Header Row -->
+                            <div
+                                class="grid grid-cols-12 bg-surface p-md rounded-lg shadow-sm font-label-md text-label-md text-primary items-center">
+                                <div class="col-span-6">Benefício</div>
+                                <div class="col-span-2 text-center">Bronze</div>
+                                <div class="col-span-2 text-center font-bold">Prata</div>
+                                <div class="col-span-2 text-center">Ouro</div>
+                            </div>
+                            <!-- Row 1: Compras & Rações -->
+                            <div
+                                class="grid grid-cols-12 bg-surface-container-low hover:bg-surface p-md rounded-lg items-center transition-colors">
+                                <div class="col-span-6 flex items-center gap-sm">
+                                    <span class="material-symbols-outlined text-primary text-[22px]">shopping_bag</span>
+                                    <span class="font-body-md text-body-md text-on-surface">Descontos em Rações &amp;
+                                        Acessórios</span>
+                                </div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">5%
+                                    a 10%</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-primary font-bold">15%
+                                    a 20%</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                                    Até 30%</div>
+                            </div>
+                            <!-- Row 2: Banho e Cuidados -->
+                            <div
+                                class="grid grid-cols-12 bg-surface-container-low hover:bg-surface p-md rounded-lg items-center transition-colors">
+                                <div class="col-span-6 flex items-center gap-sm">
+                                    <span class="material-symbols-outlined text-primary text-[22px]">content_cut</span>
+                                    <span class="font-body-md text-body-md text-on-surface">Banho, Tosa &amp; Estética
+                                        Pet</span>
+                                </div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">5%
+                                </div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-primary font-bold">15%
+                                </div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                                    25%</div>
+                            </div>
+                            <!-- Row 3: Saúde e Veterinário -->
+                            <div
+                                class="grid grid-cols-12 bg-surface-container-low hover:bg-surface p-md rounded-lg items-center transition-colors">
+                                <div class="col-span-6 flex items-center gap-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[22px]">medical_services</span>
+                                    <span class="font-body-md text-body-md text-on-surface">Orientação &amp;
+                                        Telemedicina Veterinária</span>
+                                </div>
+                                <div class="col-span-2 text-center text-outline-variant">—</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-primary font-bold">1x
+                                    ao mês</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                                    Ilimitada 24h</div>
+                            </div>
+                            <!-- Row 4: Box de Brindes -->
+                            <div
+                                class="grid grid-cols-12 bg-surface-container-low hover:bg-surface p-md rounded-lg items-center transition-colors">
+                                <div class="col-span-6 flex items-center gap-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[22px]">featured_seasonal_and_gifts</span>
+                                    <span class="font-body-md text-body-md text-on-surface">Box Física com Mimos e
+                                        Brinquedos</span>
+                                </div>
+                                <div class="col-span-2 text-center text-outline-variant">—</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-primary font-bold">
+                                    Bimestral</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                                    Mensal</div>
+                            </div>
+                            <!-- Row 5: Conteúdo e Aulas -->
+                            <div
+                                class="grid grid-cols-12 bg-surface-container-low hover:bg-surface p-md rounded-lg items-center transition-colors">
+                                <div class="col-span-6 flex items-center gap-sm">
+                                    <span class="material-symbols-outlined text-primary text-[22px]">school</span>
+                                    <span class="font-body-md text-body-md text-on-surface">Cursos de Adestramento &amp;
+                                        Bem-Estar</span>
+                                </div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                                    Artigos VIP</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-primary font-bold">
+                                    Acesso Total</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                                    Total + Mentorias</div>
+                            </div>
+                            <!-- Row 6: Impacto Social -->
+                            <div
+                                class="grid grid-cols-12 bg-surface-container-low hover:bg-surface p-md rounded-lg items-center transition-colors">
+                                <div class="col-span-6 flex items-center gap-sm">
+                                    <span class="material-symbols-outlined text-primary text-[22px]">favorite</span>
+                                    <span class="font-body-md text-body-md text-on-surface">Impacto Mensal no
+                                        Abrigo</span>
+                                </div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">10
+                                    refeições</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-primary font-bold">
+                                    Vacinas de 1 pet</div>
+                                <div class="col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                                    Ração de 2 pets</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Community Impact Spotlight -->
+            <section class="w-full py-xl mb-xl">
+                <div class="max-w-container-max mx-auto px-gutter">
+                    <div
+                        class="bg-surface-container p-xl rounded-xl shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+                        <div class="lg:col-span-6">
+                            <div class="relative rounded-xl overflow-hidden shadow-md aspect-video">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="A diverse group of cheerful volunteers and pet adopters wearing warm neutral clothing interacting joyfully with rescued rescue dogs in a sunlit public park with lush green grass, creating an authentic and heartwarming community environment."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-cAZCjcmjQ7wa_OQLgq2qIDaJoIQn6EXxG25dcHxEI7Rn5C3CyG0jPhRho6anXlNGKyWYvXAlKzHXw4CguzJFOGKR32ErFCQHiykOTz4rWHAXwd6JPWTHoMBTw8JGgWFE_9ybOoL08lKhubf-R5nHuFJc_iqTKHLCSFjJRvZ9YGGc7cTvGUR34jStCdbhKoPZ5RIm6Nvxd9Ow3eyQCXjLuYitYm-7XF0MhPnYqwEG_kT0FInKvo5m" />
+                            </div>
+                        </div>
+                        <div class="lg:col-span-6 flex flex-col items-start">
+                            <span
+                                class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-xs">Comunidade
+                                &amp; Amor</span>
+                            <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Você economiza, eles
+                                encontram esperança</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-lg leading-relaxed">
+                                Diferente de clubes de fidelidade tradicionais onde os lucros vão para intermediários,
+                                no <strong>PetVip</strong> cada centavo excedente é transformado em cirurgias de
+                                emergência, vacinas essenciais e sachês nutritivos para os animais que aguardam adoção.
+                            </p>
+                            <div class="flex items-center gap-md">
+                                <div class="flex items-center gap-xs text-primary font-bold">
+                                    <span class="material-symbols-outlined text-[20px]">check</span>
+                                    <span class="font-label-md text-label-md">Cancelamento Fácil</span>
+                                </div>
+                                <div class="flex items-center gap-xs text-primary font-bold">
+                                    <span class="material-symbols-outlined text-[20px]">check</span>
+                                    <span class="font-label-md text-label-md">Prestação de Contas Mensal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Partner Brands Grid -->
+            <section class="w-full py-xl mb-xl text-center">
+                <div class="max-w-container-max mx-auto px-gutter">
+                    <span class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-xs block">Rede
+                        Credenciada</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-xl">Mais de 120 marcas e clínicas
+                        conveniadas</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-md items-center">
+                        <div
+                            class="bg-surface p-md rounded-xl shadow-sm flex flex-col items-center justify-center h-24 hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-secondary text-[32px] mb-xs">local_mall</span>
+                            <span class="font-label-md text-label-md text-on-surface font-bold">VetCare+</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl shadow-sm flex flex-col items-center justify-center h-24 hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-secondary text-[32px] mb-xs">pets</span>
+                            <span class="font-label-md text-label-md text-on-surface font-bold">Cobasi Amigo</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl shadow-sm flex flex-col items-center justify-center h-24 hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-secondary text-[32px] mb-xs">nutrition</span>
+                            <span class="font-label-md text-label-md text-on-surface font-bold">NaturalPet</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl shadow-sm flex flex-col items-center justify-center h-24 hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-secondary text-[32px] mb-xs">spa</span>
+                            <span class="font-label-md text-label-md text-on-surface font-bold">BichoLimpo</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl shadow-sm flex flex-col items-center justify-center h-24 hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-secondary text-[32px] mb-xs">home_health</span>
+                            <span class="font-label-md text-label-md text-on-surface font-bold">FarmiVet</span>
+                        </div>
+                        <div
+                            class="bg-surface p-md rounded-xl shadow-sm flex flex-col items-center justify-center h-24 hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-secondary text-[32px] mb-xs">hotel</span>
+                            <span class="font-label-md text-label-md text-on-surface font-bold">LarSweet Pet</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonials Section -->
+            <section class="w-full py-xl mb-xl bg-surface-container rounded-xl">
+                <div class="max-w-container-max mx-auto px-gutter">
+                    <div class="text-center max-w-2xl mx-auto mb-xl">
+                        <span class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-xs block">O
+                            Que Dizem os Membros</span>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">Histórias de Tutores que Fazem Parte
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                        <!-- Depoimento 1 -->
+                        <div class="bg-surface p-xl rounded-xl shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex gap-xs text-primary mb-md">
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-lg italic">
+                                    "Economizo mais de R$ 90 todo mês apenas na compra da ração renal do Pipoca pelo
+                                    desconto PetVip. E saber que parte dessa mensalidade alimenta cães resgatados aquece
+                                    o coração."
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-sm">
+                                <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Close-up headshot of a smiling woman in her early 30s wearing a warm terracotta sweater, with soft outdoor sunlight in natural warm earth tones."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm4tiB09hnrw5uDME_CGKmtxNxDcVmGegSW6-DTsLJ-we1miJgyC7v2ckNteB2HNwVgg1a9v3TB-0GVUrTBr_-YEtYwW4peVOI_r7JSOiLtxcW-_nektMcgULNJnLamg75SSkuRINyf8nUA-YJvI_Myk1EWy3hqmPBwArAQ_S1vzGEOt7ghzG0nuR4PxGy47tj7ny0n1qfs_778MiSYBJhQQHu1dADPGDO6wYKPKJtmoIOqu-CDpDE" />
+                                </div>
+                                <div>
+                                    <p class="font-label-md text-label-md text-primary font-bold">Juliana Mendes</p>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Tutora do Pipoca •
+                                        PetVip Prata</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Depoimento 2 -->
+                        <div class="bg-surface p-xl rounded-xl shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex gap-xs text-primary mb-md">
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-lg italic">
+                                    "A teleorientação 24h me salvou em um sábado de madrugada quando meu gato engoliu um
+                                    pedaço de fita. O veterinário me tranquilizou e orientou o que fazer de imediato."
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-sm">
+                                <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="A portrait of a kind-faced man in his late 20s smiling gently in natural domestic warm interior lighting, authentic and relatable aesthetic."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp203iYFRrIS0VC3KfYxvyaRZhw3R9VwzdEqeYgjqDsDQttZas0DcKMQ9_3GAXYh0JZ1-DlEdjwidifSU25W-95Wal3a6AQl0xKQwLMMHlOrNPWGmyp4de2demo_-t9dQGbWxmenJqtH4pwVQHUwmFEnb8jT55EGg1CMJtXQWxK1IZJ2IrCCQRCbNtJSNn4LJwiWP3x54df8qWhJL8VEWRYHVi56sSRLqu3tia4K52zJOd53ricrl2" />
+                                </div>
+                                <div>
+                                    <p class="font-label-md text-label-md text-primary font-bold">Rodrigo Alencar</p>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Tutor da Luna • PetVip
+                                        Ouro</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Depoimento 3 -->
+                        <div class="bg-surface p-xl rounded-xl shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex gap-xs text-primary mb-md">
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style='font-variation-settings: "FILL" 1;'>star</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-lg italic">
+                                    "A Box bimestral é a maior festa quando chega! Os petiscos são naturais e de alta
+                                    qualidade. É a assinatura mais vantajosa e com maior propósito que já assinei."
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-sm">
+                                <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Portrait of a cheerful middle-aged woman with warm friendly smile, relaxed natural lighting, dressed in cozy light beige cardigan."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmdHJW35oWW2dVJzdYgJHax6VjYmsTjavnmX19tkVF7whXHGW-eOuHVHNGWH9KQpDxy2XwIroRDn6pkExqB_6tG4yjkAQZt_h6iFzpqrH0Sc1w1zq2Nym8APpdO2ruBU7DtPKIHSsaSgEAFakvYfas4SoRFzFVd-j8AZ68I1MtwVUyMMiycchrQWc7PgsgQu-7B7R6KP1zw4ZyvqUyHnD1pAEGjcJCUymTDNLNK_IzlsxlAZpeftWo" />
+                                </div>
+                                <div>
+                                    <p class="font-label-md text-label-md text-primary font-bold">Beatriz Nogueira</p>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Tutora do Luke • PetVip
+                                        Prata</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FAQ Section (Interactive with vanilla JS) -->
+            <section class="w-full py-xl mb-xl">
+                <div class="max-w-container-max mx-auto px-gutter max-w-2xl">
+                    <div class="text-center mb-xl">
+                        <span
+                            class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-xs block">Tire
+                            Suas Dúvidas</span>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">Perguntas Frequentes</h2>
+                    </div>
+                    <div class="flex flex-col gap-md" id="faq-container">
+                        <!-- FAQ Item 1 -->
+                        <div class="bg-surface-container rounded-xl p-lg shadow-sm cursor-pointer"
+                            onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-headline-md text-headline-md text-primary">Posso cancelar o PetVip a
+                                    qualquer momento?</h4>
+                                <span
+                                    class="material-symbols-outlined text-primary transition-transform duration-200">expand_more</span>
+                            </div>
+                            <div class="faq-content hidden pt-md">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Sim! Nossos planos não possuem período de fidelidade nem multas rescisórias. Você
+                                    pode cancelar ou pausar sua assinatura com um clique direto pelo seu perfil ou via
+                                    WhatsApp com nossa equipe.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 2 -->
+                        <div class="bg-surface-container rounded-xl p-lg shadow-sm cursor-pointer"
+                            onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-headline-md text-headline-md text-primary">Como utilizo os descontos nas
+                                    lojas e clínicas?</h4>
+                                <span
+                                    class="material-symbols-outlined text-primary transition-transform duration-200">expand_more</span>
+                            </div>
+                            <div class="faq-content hidden pt-md">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Ao assinar, você tem acesso ao seu Cartão Digital com QR Code no painel do usuário e
+                                    cupons exclusivos para lojas online. Em estabelecimentos físicos credenciados, basta
+                                    apresentar o cartão digital e documento com foto no momento do pagamento.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 3 -->
+                        <div class="bg-surface-container rounded-xl p-lg shadow-sm cursor-pointer"
+                            onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-headline-md text-headline-md text-primary">Como o valor da minha
+                                    assinatura ajuda os animais?</h4>
+                                <span
+                                    class="material-symbols-outlined text-primary transition-transform duration-200">expand_more</span>
+                            </div>
+                            <div class="faq-content hidden pt-md">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    100% da receita líquida do programa é destinada ao custeio de atendimentos
+                                    veterinários complexos, vacinação em massa e ração para os animais resgatados pelo
+                                    abrigo Patas Carentes. Todos os meses enviamos um relatório de transparência
+                                    detalhado por e-mail para todos os assinantes.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 4 -->
+                        <div class="bg-surface-container rounded-xl p-lg shadow-sm cursor-pointer"
+                            onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-headline-md text-headline-md text-primary">O que vem dentro da Box
+                                    PetVip de Brindes?</h4>
+                                <span
+                                    class="material-symbols-outlined text-primary transition-transform duration-200">expand_more</span>
+                            </div>
+                            <div class="faq-content hidden pt-md">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    A Box é personalizada de acordo com o porte do seu pet (informado no cadastro). Ela
+                                    contém petiscos 100% naturais sem conservantes artificiais, brinquedos educativos e
+                                    itens de cuidado e higiene de fornecedores parceiros certificados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Final Call to Action -->
+            <section class="w-full pb-xl">
+                <div class="max-w-container-max mx-auto px-gutter">
+                    <div
+                        class="bg-surface-container-high p-xl rounded-xl shadow-md text-center flex flex-col items-center max-w-3xl mx-auto">
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#FF9CA6] text-primary flex items-center justify-center mb-md shadow-sm">
+                            <span class="material-symbols-outlined text-[32px]">favorite</span>
+                        </div>
+                        <h2 class="font-display-lg text-display-lg text-primary mb-md">Pronto para fazer parte dessa
+                            corrente do bem?</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-xl">
+                            Junte-se a mais de 2.500 tutores apaixonados. Economize cuidando de quem você ama e salve
+                            vidas a cada mês.
+                        </p>
+                        <div class="flex flex-wrap items-center justify-center gap-md">
+                            <a class="bg-primary text-on-primary hover:bg-primary-container px-xl py-md rounded-lg font-bold text-label-md font-label-md shadow-lg transition-all active:scale-95"
+                                href="#planos">
+                                Quero Ser PetVip Agora
+                            </a>
+                            <button
+                                class="bg-surface hover:bg-surface-container text-primary px-xl py-md rounded-lg font-bold text-label-md font-label-md transition-all active:scale-95 flex items-center gap-xs">
+                                <span class="material-symbols-outlined text-[18px]">chat</span>
+                                <span class="">Falar com Atendente</span>
+                            </button>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-md">Garantia incondicional de 7
+                            dias com reembolso integral.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Vanilla JS for FAQ Accordion -->
+            <script>
+                function toggleFaq(element) {
+                    const content = element.querySelector('.faq-content');
+                    const icon = element.querySelector('.material-symbols-outlined');
+                    const isOpen = !content.classList.contains('hidden');
+
+                    // Close all first for clean single-open accordion feel
+                    document.querySelectorAll('#faq-container .faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('#faq-container .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                }
+            </script>
+        </div>
+    </main>
+    <!-- Partners Row (Customized) -->
+    <section class="max-w-container-max mx-auto px-gutter py-xl">
+        <div class="flex flex-wrap justify-center items-center gap-xl opacity-80">
+            <div
+                class="bg-white rounded-full w-24 h-24 flex items-center justify-center shadow-sm border border-surface-variant">
+                <img alt="Fatec" class="max-w-[70%] grayscale hover:grayscale-0 transition-all"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwkko1uI3ARHHIFpTqtVuj_qNyJ-lBN76hKRrkYsUaohQJyQAhBs3NkvP8dFUDuG2f1_Ca0kAh27Xoxb1n9Ve3jrZ4wDDnS_u657PjMrFk-CjKnpc3mHq99RsXIy42olY0rOLyuXkvTZxfeu-b4rpOVfFZznG5bJeReQG5I7sYqfN9gQxCfn7C9T1H8eKBZlBJjdGVVKrR6_FeLMU1elTQWXXM3UvBd50_g2rItYin-TPrK0noKkQqpR9pLsOrtJmZIKXOF51ybCU" />
+            </div>
+            <div
+                class="bg-white rounded-full w-24 h-24 flex items-center justify-center shadow-sm border border-surface-variant">
+                <img alt="Fatec" class="max-w-[70%] grayscale hover:grayscale-0 transition-all"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE14cbnHcGVXoEBn2QZNExCCXOb9UyugPpKHqEzB8MdhcqLhcfGAmYn01MZXvvC3yLB8TTT1w31vYxM0ZmjWZrcX8Jbr8FTS7BJgjUDBTVFdJe2KrKp3kxVzv2-k1lLXCqw-I32iPktLAodHrpM3gh7f5YmKHzYCKwz6olkKvF4Sw5cHFZYj5IOzaYGAP0tLHUTfL3A6tpNHrVOskbxJBIRhokJrCgIJCaUUYfgEApHv70B_lx226e_EQuqwxuzT-WciopOGxzqYk" />
+            </div>
+        </div>
+    </section>
+    <!-- Footer (Shared Component) -->
+    <footer class="bg-surface-container dark:bg-inverse-surface mt-xl">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter py-xl max-w-container-max mx-auto">
+            <div class="flex flex-col gap-md">
+                <div class="text-headline-sm font-headline-sm text-primary">Patas Carentes</div>
+                <div class="text-body-md font-body-md text-on-surface-variant dark:text-inverse-on-surface">
+                    Redes Sociais<br />
+                    @patascarentes<br />
+                    @patascarentes<br />
+                    @patascarentes
+                </div>
+            </div>
+            <div class="flex flex-col gap-sm">
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md"
+                    href="#">Sobre nós</a>
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md"
+                    href="#">Parcerias</a>
+            </div>
+            <div class="md:col-span-2 flex flex-col items-center md:items-end justify-between">
+                <div class="flex gap-md mb-md">
+                    <button
+                        class="bg-primary text-on-primary px-lg py-sm rounded-lg text-label-md font-label-md hover:opacity-90">Sobre
+                        nós</button>
+                    <button
+                        class="bg-primary text-on-primary px-lg py-sm rounded-lg text-label-md font-label-md hover:opacity-90">Parcerias</button>
+                </div>
+                <p
+                    class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant text-center md:text-right">
+                    copyright© todos os direitos reservados
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
